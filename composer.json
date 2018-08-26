@@ -1,0 +1,13 @@
+{
+  "name": "tivwp/woocommerce-multicurrency-provider-qa",
+  "description": "QA Rates Provider for WooCommerce Multi-currency",
+  "license": "GPL-3.0",
+  "type": "wordpress-plugin",
+  "require": {},
+  "authors": [
+    {
+      "name": "Gregory Karpinsky",
+      "role": "Lead Developer"
+    }
+  ]
+}
