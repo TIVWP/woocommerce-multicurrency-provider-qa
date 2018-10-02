@@ -7,7 +7,7 @@
  * Author: TIV.NET INC.
  * Author URI: https://www.tiv.net/
  * WC requires at least: 3.0.0
- * WC tested up to: 3.4.4
+ * WC tested up to: 3.4.5
  * License: GPL-3.0-or-later
  * License URI: https://spdx.org/licenses/GPL-3.0-or-later.html
  */
