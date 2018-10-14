@@ -31,6 +31,7 @@ class QA extends ProviderAbstract {
 			'GBP' => 3,
 			'JPY' => 100,
 			'USD' => 1,
+			'AUD' => 4,
 		);
 
 	}
