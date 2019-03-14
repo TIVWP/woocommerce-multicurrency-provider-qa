@@ -2,6 +2,8 @@
 
 namespace WOOMC\MultiCurrency\Rate\Provider;
 
+use WOOMC\MultiCurrency\DAO\Factory;
+
 /**
  * Class Provider\FixedRates
  */
@@ -24,6 +26,15 @@ class QA extends ProviderAbstract {
 		// Rates updated now.
 		$this->setTimestamp( time() );
 
+		/**
+		 * Retrieval status is always true.
+		 *
+		 * @since 0.0.2
+		 */
+		if ( method_exists( '\WOOMC\MultiCurrency\DAO\IDAO', 'getRatesRetrievalStatus' ) ) {
+			Factory::getDao()->setRatesRetrievalStatus( true );
+		}
+
 		// Return some fake rates.
 		return array(
 			'CAD' => 0.5,
@@ -41,14 +52,16 @@ class QA extends ProviderAbstract {
 	 */
 	public static function register() {
 
-		add_filter( 'woocommerce_multicurrency_providers',
+		add_filter(
+			'woocommerce_multicurrency_providers',
 			array(
 				__CLASS__,
 				'filter__woocommerce_multicurrency_providers',
 			)
 		);
 
-		add_filter( 'woocommerce_multicurrency_providers_credentials_name',
+		add_filter(
+			'woocommerce_multicurrency_providers_credentials_name',
 			array(
 				__CLASS__,
 				'filter__woocommerce_multicurrency_providers_credentials_name',

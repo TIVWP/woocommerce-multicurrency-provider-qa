@@ -3,11 +3,11 @@
  * Plugin Name: QA Rates Provider for WooCommerce Multi-currency
  * Plugin URI: https://github.com/TIVWP/woocommerce-multicurrency-provider-qa
  * Description: Returns a set of fake currency rates, useful for QA automation scripts.
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: TIV.NET INC.
  * Author URI: https://www.tiv.net/
- * WC requires at least: 3.0.0
- * WC tested up to: 3.4.5
+ * WC requires at least: 3.4.0
+ * WC tested up to: 3.5.6
  * License: GPL-3.0-or-later
  * License URI: https://spdx.org/licenses/GPL-3.0-or-later.html
  */

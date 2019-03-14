@@ -8,7 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-add_action( 'woocommerce_multicurrency_before_loading',
+add_action(
+	'woocommerce_multicurrency_before_loading',
 	function () {
 		require_once __DIR__ . '/MultiCurrency/Rate/Provider/QA.php';
 		QA::register();
