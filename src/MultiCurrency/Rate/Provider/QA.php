@@ -10,11 +10,14 @@ use WOOMC\MultiCurrency\DAO\Factory;
 class QA extends ProviderAbstract {
 
 	/**
-	 * Provider ID.
+	 * The provider ID.
 	 *
-	 * @var string
+	 * @return string
+	 * @since 0.0.2 Compatible with WOOMC 1.15.0
 	 */
-	const PROVIDER_ID = 'QA';
+	public static function id() {
+		return 'QA';
+	}
 
 	/**
 	 * Retrieve rates.
@@ -79,7 +82,7 @@ class QA extends ProviderAbstract {
 	 * @return string[]
 	 */
 	public static function filter__woocommerce_multicurrency_providers( $providers ) {
-		$providers[ self::PROVIDER_ID ] = self::PROVIDER_ID;
+		$providers[ self::id() ] = self::id();
 
 		return $providers;
 	}
@@ -94,7 +97,7 @@ class QA extends ProviderAbstract {
 	 * @return string[]
 	 */
 	public static function filter__woocommerce_multicurrency_providers_credentials_name( $providers_credentials_name ) {
-		$providers_credentials_name[ self::PROVIDER_ID ] = ': keep this blank';
+		$providers_credentials_name[ self::id() ] = ': keep this blank';
 
 		return $providers_credentials_name;
 	}
